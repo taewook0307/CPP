@@ -37,6 +37,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TypedefAndUsing", "TypedefA
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Virtual", "Virtual\Virtual.vcxproj", "{BA0B0B52-B85D-486B-B559-B277227530CE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chrono", "Chrono", "{8D538F9B-4811-4466-B8F8-74D7F0ACF283}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HighResolutionClock", "HighResolutionClock\HighResolutionClock.vcxproj", "{A83C4B0B-A537-4946-9581-9D72C31A5BD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -181,8 +185,19 @@ Global
 		{BA0B0B52-B85D-486B-B559-B277227530CE}.Release|x64.Build.0 = Release|x64
 		{BA0B0B52-B85D-486B-B559-B277227530CE}.Release|x86.ActiveCfg = Release|Win32
 		{BA0B0B52-B85D-486B-B559-B277227530CE}.Release|x86.Build.0 = Release|Win32
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Debug|x64.ActiveCfg = Debug|x64
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Debug|x64.Build.0 = Debug|x64
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Debug|x86.ActiveCfg = Debug|Win32
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Debug|x86.Build.0 = Debug|Win32
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Release|x64.ActiveCfg = Release|x64
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Release|x64.Build.0 = Release|x64
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Release|x86.ActiveCfg = Release|Win32
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A83C4B0B-A537-4946-9581-9D72C31A5BD7} = {8D538F9B-4811-4466-B8F8-74D7F0ACF283}
 	EndGlobalSection
 EndGlobal

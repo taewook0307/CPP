@@ -2,146 +2,62 @@
 //
 
 #include <iostream>
-#include <crtdbg.h>
-
-class String
-{
-public:
-    explicit String(int _Size)
-    {
-        Size = _Size;
-        Data = new char[Size];
-        std::cout << "Size : " << _Size << std::endl;
-    }
-
-    String(char c)
-    {
-        Size = 1;
-        Data = new char[Size];
-        Data[0] = c;
-    }
-
-    String(const char* _Data)
-    {
-        Size = static_cast<int>(strlen(_Data));
-        Data = new char[Size];
-
-        for (int i = 0; i < Size; ++i)
-        {
-            Data[i] = _Data[i];
-        }
-    }
-
-    String(const String& _Other)
-    {
-        Size = _Other.Size;
-
-        for (int i = 0; i < Size; ++i)
-        {
-            Data[i] = _Other.Data[i];
-        }
-    }
-
-    ~String()
-    {
-        if (Data != nullptr)
-        {
-            delete[] Data;
-            Data = nullptr;
-        }
-    }
-
-    int GetSize() const
-    {
-        return Size;
-    }
-
-    String& Plus(const String& _Other)
-    {
-        int NewSize = Size + _Other.Size;
-        char* PlusChar = new char[NewSize];
-
-        for (int i = 0; i < Size; ++i)
-        {
-            PlusChar[i] = Data[i];
-        }
-
-        for (int i = Size; i < NewSize; ++i)
-        {
-            PlusChar[i] = _Other.Data[i - Size];
-        }
-
-        if (Data != nullptr)
-        {
-            delete[] Data;
-        }
-
-        Size = NewSize;
-        Data = PlusChar;
-
-        return *this;
-    }
-
-    bool Compare(const String& _Other) const
-    {
-        if (_Other.Size != Size)
-        {
-            return false;
-        }
-
-        for (int i = 0; i < Size; ++i)
-        {
-            if (_Other.Data[i] == Data[i])
-            {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    void Print() const
-    {
-        for (int i = 0; i < Size; ++i)
-        {
-            std::cout << Data[i];
-        }
-    }
-
-    char PrintLoc(int _Loc) const
-    {
-        if (Size <= _Loc)
-        {
-            return NULL;
-        }
-
-        return Data[_Loc];
-    }
-
-private:
-    char* Data;
-    int Size = 0;
-};
-
-String DoSomething(String _String)
-{
-    _String.Print();
-    return _String;
-}
+#include <string>
 
 int main()
 {
-    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	std::string S1 = "Hello World";
 
-    String S1 = "abc";
-    String S2 = "def";
+	std::cout << "S1 Size : " << S1.size() << std::endl;
+	std::cout << "S1 Length : " << S1.length() << std::endl;
+	std::cout << "S1 Capacity : " << S1.capacity() << std::endl << std::endl;
 
-    S1.Plus(S2);
+	S1.clear();
 
-    S1.Print();
-    std::cout << std::endl;
+	std::cout << "S1 Clear 후" << std::endl;
+	std::cout << "S1 Size : " << S1.size() << std::endl;
+	std::cout << "S1 Length : " << S1.length() << std::endl;
+	std::cout << "S1 Capacity : " << S1.capacity() << std::endl << std::endl;
 
-    DoSomething("random");
-    std::cout << std::endl;
-    String Test = DoSomething(String(3));         // 컴파일러에 의해 아예 코드 자체가 지워짐
+	S1 = "Hello World";
+	S1.erase();
+
+	std::cout << "S1 Erase 후" << std::endl;
+	std::cout << "S1 Size : " << S1.size() << std::endl;
+	std::cout << "S1 Length : " << S1.length() << std::endl;
+	std::cout << "S1 Capacity : " << S1.capacity() << std::endl << std::endl;
+
+	S1 = "Hello World";
+	int Index = S1.find('o');
+	int FirstIndex = S1.find_first_of('o');
+	int LastIndex = S1.find_last_of('o');
+	int FirstNotIndex = S1.find_first_not_of('o');			// 해당 문자를 제외한 첫번째 문자 : o를 제외한 첫번째 문자는 H 이므로 0
+	int LastNotIndex = S1.find_last_not_of('o');			// 해당 문자를 제외한 뒤에서 첫번째 문자 : o를 제외한 뒤에서 첫번째 문자는 d 이므로 10
+
+	std::cout << "S1 find o : " << Index << std::endl;
+	std::cout << "S1 first find o : " << FirstIndex << std::endl;
+	std::cout << "S1 last find o : " << LastIndex << std::endl;
+	std::cout << "S1 first not find o : " << FirstNotIndex << std::endl;
+	std::cout << "S1 last not find o : " << LastNotIndex << std::endl << std::endl;
+
+	std::string S2 = "ABCDEFG";
+	std::string S3 = S1;
+	std::string S4 = "Input";
+
+	std::cout << "S1 compare S2 : " << S1.compare(S2) << std::endl;
+	std::cout << "S1 compare S3 : " << S1.compare(S3) << std::endl;
+	std::cout << "S1 compare S4 : " << S1.compare(S4) << std::endl;
+	std::cout << "S1 == S2 : " << (S1 == S2) << std::endl;
+	std::cout << "S1 == S3 : " << (S1 == S3) << std::endl;
+	std::cout << "S1 == S4 : " << (S1 == S4) << std::endl << std::endl;
+
+	int Num = 1;
+	std::string NumString;
+
+	NumString += std::to_string(Num);
+	NumString += "20";
+	Num = std::stoi(NumString);
+
+	std::cout << "Num : " << Num << std::endl;
+	std::cout << "NumString : " << NumString << std::endl << std::endl;
 }

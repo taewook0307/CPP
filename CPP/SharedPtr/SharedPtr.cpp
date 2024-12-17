@@ -1,0 +1,74 @@
+﻿// SharedPtr.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
+//
+
+#include <iostream>
+#include <string>
+
+class Actor
+{
+public:
+    Actor()
+    {
+        std::cout << "Actor Constructor" << std::endl;
+    }
+
+    virtual ~Actor()
+    {
+        std::cout << "Actor Destructor" << std::endl;
+    }
+
+    void Attack(std::shared_ptr<Actor> _Other)
+    {
+        std::cout << this->Name + "이 " + _Other->Name + "을 공격" << std::endl;
+    }
+
+    std::string Name = "";
+};
+
+class Warrior : public Actor
+{
+public:
+    Warrior()
+    {
+        std::cout << "Warrior Constructor" << std::endl;
+        Name = "Warrior";
+    }
+
+    ~Warrior()
+    {
+        std::cout << "Warrior Destructor" << std::endl;
+    }
+};
+
+class Monster : public Actor
+{
+public:
+    Monster()
+    {
+        std::cout << "Monster Constructor" << std::endl;
+        Name = "Monster";
+    }
+
+    ~Monster()
+    {
+        std::cout << "Monster Destructor" << std::endl;
+    }
+};
+
+int main()
+{
+    //std::shared_ptr<Actor> Player = std::make_shared<Warrior>();
+    //std::shared_ptr<Actor> Devil = std::make_shared<Monster>();
+
+    //Player->Attack(Devil);
+    //Devil->Attack(Player);
+    //Player->Attack(Devil);
+
+    std::shared_ptr<Actor> Check(new Warrior());
+    std::shared_ptr<Actor> Check2(Check);
+    std::shared_ptr<Actor> Check3(Check2);
+
+    std::cout << Check.use_count() << std::endl;
+    std::cout << Check2.use_count() << std::endl;
+    std::cout << Check3.use_count() << std::endl;
+}

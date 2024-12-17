@@ -61,6 +61,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Atomic", "Atomic\Atomic.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryOrderAcquire_Release", "MemoryOrderAcquire_Release\MemoryOrderAcquire_Release.vcxproj", "{D76343D9-5EE5-44D2-A8C4-FDE98B775E04}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryOrderRelaxed", "MemoryOrderRelaxed\MemoryOrderRelaxed.vcxproj", "{5560730C-95E4-43E2-80D2-9A523231DB91}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -269,6 +271,14 @@ Global
 		{D76343D9-5EE5-44D2-A8C4-FDE98B775E04}.Release|x64.Build.0 = Release|x64
 		{D76343D9-5EE5-44D2-A8C4-FDE98B775E04}.Release|x86.ActiveCfg = Release|Win32
 		{D76343D9-5EE5-44D2-A8C4-FDE98B775E04}.Release|x86.Build.0 = Release|Win32
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Debug|x64.ActiveCfg = Debug|x64
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Debug|x64.Build.0 = Debug|x64
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Debug|x86.ActiveCfg = Debug|Win32
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Debug|x86.Build.0 = Debug|Win32
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Release|x64.ActiveCfg = Release|x64
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Release|x64.Build.0 = Release|x64
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Release|x86.ActiveCfg = Release|Win32
+		{5560730C-95E4-43E2-80D2-9A523231DB91}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -282,5 +292,6 @@ Global
 		{CE862570-499F-4826-A1B3-961CF80DD3DA} = {FF8238FA-EE3D-4E9A-A2D5-EE6BDCFFFB5B}
 		{7B3E9470-B03D-4112-BFC5-67D6EAF361E6} = {DE0E610C-4DE5-4CD2-AD29-18D08D242DFC}
 		{D76343D9-5EE5-44D2-A8C4-FDE98B775E04} = {DE0E610C-4DE5-4CD2-AD29-18D08D242DFC}
+		{5560730C-95E4-43E2-80D2-9A523231DB91} = {DE0E610C-4DE5-4CD2-AD29-18D08D242DFC}
 	EndGlobalSection
 EndGlobal

@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataSave", "DataSave\DataSa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MemoryAddress", "MemoryAddress\MemoryAddress.vcxproj", "{7817F55C-5BCE-4F01-A246-3A202F3A4294}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Permutation", "Permutation\Permutation.vcxproj", "{554F00B7-51B8-4738-B7E9-38D70998767B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{7817F55C-5BCE-4F01-A246-3A202F3A4294}.Release|x64.Build.0 = Release|x64
 		{7817F55C-5BCE-4F01-A246-3A202F3A4294}.Release|x86.ActiveCfg = Release|Win32
 		{7817F55C-5BCE-4F01-A246-3A202F3A4294}.Release|x86.Build.0 = Release|Win32
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Debug|x64.ActiveCfg = Debug|x64
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Debug|x64.Build.0 = Debug|x64
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Debug|x86.ActiveCfg = Debug|Win32
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Debug|x86.Build.0 = Debug|Win32
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Release|x64.ActiveCfg = Release|x64
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Release|x64.Build.0 = Release|x64
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Release|x86.ActiveCfg = Release|Win32
+		{554F00B7-51B8-4738-B7E9-38D70998767B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
